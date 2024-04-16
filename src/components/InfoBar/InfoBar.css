@@ -12,10 +12,14 @@
 
 .grey{
     background-color:#a9a9a9;
+    border:none;
 }
+
+
 
 .green{
     background-color:#008000;
+
 }
 
 .overflow-hidden {

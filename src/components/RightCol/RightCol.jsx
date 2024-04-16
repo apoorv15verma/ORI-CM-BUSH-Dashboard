@@ -4,11 +4,14 @@ import { updateSum } from '../../app/rangeSlice';
 
 function RightCol() {
     const { sum } = useSelector((state) => state.range);
+    const hotspotValue = useSelector((state) => state.range.hotspotValue);
+    const highValue = useSelector((state) => state.range.highValue);
+
     let backgroundColor = "#99cb38";
 
-    if (sum > 70 && sum <= 140) {
+    if (sum > highValue && sum <= hotspotValue) {
         backgroundColor = "#ffc300";
-    } else if (sum > 140) {
+    } else if (sum > hotspotValue) {
         backgroundColor = "#ff0000";
     }
 
