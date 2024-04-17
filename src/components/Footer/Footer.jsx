@@ -8,7 +8,7 @@ function Footer() {
           <h2 className="fs-1 fw-normal mt-1">Contact us</h2>
         </div>
 
-        <p className="text-center my-2">Power By TekUncorcked</p>
+        <p className="text-center my-2">Powered By TekUncorcked</p>
       </footer>
     </>
   );

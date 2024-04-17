@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { updateRange1,updateRange2,updateRange3, updateNormal, updateWarning, updateAlert } from '../../app/rangeSlice';
+import {  updateNormal, updateWarning, updateAlert } from '../../app/rangeSlice';
 
 
 function RightCol() {
@@ -14,7 +14,7 @@ function RightCol() {
     useEffect(() => {
         const timer = setTimeout(() => {
             checkSumStatus();
-        }, 500); // Adjust the delay time (in milliseconds) as needed
+        }, 500); 
         return () => clearTimeout(timer);
     }, [range1, range2, range3,hotspotValue,highValue]);
 

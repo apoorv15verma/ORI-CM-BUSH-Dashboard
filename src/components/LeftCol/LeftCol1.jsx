@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./LeftCol.css";
-import { useDispatch, useSelector  } from "react-redux";
+import { useDispatch  } from "react-redux";
 import {  updateRange1, updateRange2, updateRange3  } from '../../app/rangeSlice';
 
 function LeftCol1() {
   const dispatch = useDispatch();
  
-  // const hotspotValue = useSelector((state) => state.range.hotspotValue);
-  // const highValue = useSelector((state) => state.range.highValue);
+
 
   const [rangeValue1, setRangeValue1] = useState(0);
   const [rangeValue2, setRangeValue2] = useState(0);
@@ -51,7 +50,7 @@ console.log(parseInt(rangeValue3))
             <div className="LeftContainerInner">
               <div className="col-12 py-1 d-flex justify-content-center align-items-center">
                 <div className="col-2">13</div>
-                <div className="col-4">battery</div>
+                <div className="col-4">Temprature</div>
                 <div className="col-4">
                   <input
                     type="range"
@@ -67,7 +66,7 @@ console.log(parseInt(rangeValue3))
 
               <div className="col-12 py-1 d-flex justify-content-center align-items-center">
                 <div className="col-2">13</div>
-                <div className="col-4">battery</div>
+                <div className="col-4">Temprature</div>
                 <div className="col-4">
                 <input
                     type="range"
@@ -82,7 +81,7 @@ console.log(parseInt(rangeValue3))
 
               <div className="col-12 py-1 d-flex justify-content-center align-items-center">
                 <div className="col-2">13</div>
-                <div className="col-4">battery</div>
+                <div className="col-4">Temprature</div>
                 <div className="col-4">
                 <input
                     type="range"
