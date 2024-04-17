@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./LeftCol.css";
 import { useDispatch, useSelector  } from "react-redux";
-import { updateSum } from '../../app/rangeSlice';
+import {  updateRange1, updateRange2, updateRange3  } from '../../app/rangeSlice';
 
 function LeftCol1() {
   const dispatch = useDispatch();
-  const { sum } = useSelector((state) => state.range);
-  const hotspotValue = useSelector((state) => state.range.hotspotValue);
-  const highValue = useSelector((state) => state.range.highValue);
+ 
+  // const hotspotValue = useSelector((state) => state.range.hotspotValue);
+  // const highValue = useSelector((state) => state.range.highValue);
 
   const [rangeValue1, setRangeValue1] = useState(0);
   const [rangeValue2, setRangeValue2] = useState(0);
@@ -25,10 +25,15 @@ function LeftCol1() {
   };
 
   useEffect(() => {
-
-    const sum = parseInt(rangeValue1) + parseInt(rangeValue2) + parseInt(rangeValue3);
+console.log(parseInt(rangeValue1))
+console.log(parseInt(rangeValue2))
+console.log(parseInt(rangeValue3))
+    
    
-    dispatch(updateSum(sum));
+    dispatch(updateRange1(parseInt(rangeValue1)));
+    dispatch(updateRange2(parseInt(rangeValue2)));
+    dispatch(updateRange3(parseInt(rangeValue3)));
+
   }, [rangeValue1, rangeValue2, rangeValue3, dispatch]);
 
 

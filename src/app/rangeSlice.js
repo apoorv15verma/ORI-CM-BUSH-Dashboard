@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  hotspotValue: 100,
-  highValue: 90,
-  sum: 0,
+  hotspotValue: 80,
+  highValue: 60,
+  range1: 0,
+  range2: 0,
+  range3: 0,
   normal: 0,
   warning: 0,
   alert: 0,
@@ -19,8 +21,14 @@ const rangeSlice = createSlice({
     updateHighValue(state, action) {
       state.highValue = action.payload;
     },
-    updateSum(state, action) {
-      state.sum = action.payload;
+    updateRange1(state, action) {
+      state.range1 = action.payload;
+    },
+    updateRange2(state, action) {
+      state.range2 = action.payload;
+    },
+    updateRange3(state, action) {
+      state.range3 = action.payload;
     },
     updateNormal(state) {
       state.normal += 1;
@@ -34,6 +42,6 @@ const rangeSlice = createSlice({
   },
 });
 
-export const { updateHotspotValue, updateHighValue, updateSum, updateNormal, updateWarning, updateAlert } = rangeSlice.actions;
+export const { updateHotspotValue, updateHighValue, updateRange1, updateRange2, updateRange3 , updateNormal, updateWarning, updateAlert } = rangeSlice.actions;
 
 export default rangeSlice.reducer;
