@@ -6,6 +6,8 @@ import { updateSum } from '../../app/rangeSlice';
 function LeftCol1() {
   const dispatch = useDispatch();
   const { sum } = useSelector((state) => state.range);
+  const hotspotValue = useSelector((state) => state.range.hotspotValue);
+  const highValue = useSelector((state) => state.range.highValue);
 
   const [rangeValue1, setRangeValue1] = useState(0);
   const [rangeValue2, setRangeValue2] = useState(0);
@@ -50,6 +52,7 @@ function LeftCol1() {
                     type="range"
                     className="form-range"
                     id="customRange1"
+                    
                     value={rangeValue1}
                     onChange={handleRangeChange1}
                   />

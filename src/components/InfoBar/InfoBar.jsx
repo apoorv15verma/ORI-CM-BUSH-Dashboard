@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Change from "../Change/Change";
 
 function InfoBar() {
-  const {  highValue,hotspotValue } = useSelector((state) => state.range);
+  const {  highValue,hotspotValue,normal, warning, alert } = useSelector((state) => state.range);
   return (
     <div className="overflow-hidden"> 
     <div className="row mb-3 justify-content-center text-white fw-bolder">
@@ -18,10 +18,10 @@ function InfoBar() {
 
     <div className="row mb-3 justify-content-center text-white fw-bolder">
       <div className="col-sm-2 themed-grid-col py-3 px-1 blue">Total B</div>
-      <div className="col-sm-2 themed-grid-col py-3 px-1 grey">2 Offline</div>
-      <div className="col-sm-2 themed-grid-col py-3 px-1 red">0 alert</div>
-      <div className="col-sm-2 themed-grid-col py-3 px-1 yellow">0 warnig</div>
-      <div className="col-sm-2 themed-grid-col py-3 px-1 green">6 Normal</div>
+      <div className="col-sm-2 themed-grid-col py-3 px-1 grey"> Offline</div>
+      <div className="col-sm-2 themed-grid-col py-3 px-1 red">{alert} alert</div>
+      <div className="col-sm-2 themed-grid-col py-3 px-1 yellow">{warning} warnig</div>
+      <div className="col-sm-2 themed-grid-col py-3 px-1 green">{normal} Normal</div>
     </div>
   </div>
   );
